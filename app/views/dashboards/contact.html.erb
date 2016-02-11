@@ -1,0 +1,86 @@
+
+<div id="inner-header">
+	<img src="assets/banner/banner4.jpg" alt ="" />
+</div>
+
+<!-- Subpage title start -->
+<section id="inner-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="inner-title-content">
+					<h2>Contact</h2>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Subpage title end -->
+
+<!-- Contact page start -->
+<section id="Contact-page">
+	<div class="container">
+		<div class="row">
+
+
+
+			<!-- Contact form start -->
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="contact-form">
+					<h3>Contact us</h3>
+					<%=form_for @contact,url: {:action=>"create",:controller=>"dashboards"}, :method=>:post do |f| %>  
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Name</label>
+				<%= f.text_field :name, :placeholder=>"Name",:id=>"name",:class=>"form-control", :required=>"true"%>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Email</label>
+			<%= f.text_field :email,:id=>"email",:placeholder=>"Email Address",:class=>"form-control",:required=>"true"%>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Mobile No.</label>
+				<%= f.text_field :phno,:id=>"pho",:placeholder=>"Mobile No" , :class=>"form-control",:required=>"true"%>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Message</label>
+						<%= f.text_area  :message,:id=>"message",:placeholder=>"Message",:cols=> 3,:rows=>8, :class=>"form-control",:required=>"true"%>
+						</div>
+						<div><br>
+						
+						<%=f.submit :Submit,:name=>"submit",:class =>"btn btn-primary",:id=>"submitButton",:value=>"Send Your Message",:title=>"Send Message"%> 
+						</div>
+					<% end %>
+				</div><!-- Contact form end -->	
+			</div> <!-- Col end -->
+
+			<!-- sidebar start -->
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="contact-info">
+					<h3>Contact Info</h3>
+					<p><h3>COLORS TECHNOLOGIES</h3></p>
+					<br>
+					<p><i class="fa fa-home"></i><p>Plot No.340, Sr.No.:71/1, </p>
+					<p>Near Aparana Ind,Tapkirnagar Kalewadi,</p>
+					<p>Pune, Maharashtra, India-411017</p></p>
+					<p><i class="fa fa-phone"></i>  +(91) 9130-851-893</p>
+					<p><i class="fa fa-phone"></i>  +(91) 9130-894-329</p>
+					<p><i class="fa fa-envelope-o"></i>  info@colorstechnologies.com</p>
+					<p><i class="fa fa-globe"></i>  www.colorstechnologies.com</p>
+				</div>
+			</div><!-- sidebar end -->
+		</div><!--/ row end -->
+	</div><!--/ container end -->
+</section>
+<!-- Faq page end -->
+</br>
+</br></br>	
+
